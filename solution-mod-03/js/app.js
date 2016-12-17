@@ -38,6 +38,8 @@ function MenuSearchService($http, menuUrl) {
         });
         // return processed items
         return foundItems;
+    }).catch(function (err) {
+      console.log(err);
     });
   };
 }
