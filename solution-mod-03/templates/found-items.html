@@ -1,0 +1,22 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th class="text-center nowrap">Short Name</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th class="text-center"><span class="glyphicon glyphicon-cog"></span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in ctrl.found track by $index">
+      <td class="text-center nowrap">{{item.short_name}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.description}}</td>
+      <td class="text-center">
+        <button type="button" class="btn btn-primary" ng-click="ctrl.onRemove({index: $index});">
+          Don't want this one!
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
