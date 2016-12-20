@@ -1,36 +1,42 @@
 <!DOCTYPE html>
-<html ng-app='ShoppingList'>
+<html ng-app='MenuApp'>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>No Cookie Shopping List</title>
+    <title>Davud's Restaurant</title>
   </head>
   <body>
-    <h1>Welcome to Premade No Cookie Shopping List</h1>
+
+
+    <div class="jumbotron">
+      <div class="container">
+        <h2>David's Restaurant</h2>
+      </div>
+    </div>
 
     <ui-view></ui-view>
 
-    <loading-spinner></loading-spinner>
-
     <!-- Libraries -->
-    <script src="lib/angular.min.js"></script>
-    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
 
     <!-- Modules -->
-    <script src="src/shoppinglist/shoppinglist.module.js"></script>
-    <script src="src/spinner/spinner.module.js"></script>
+    <script src="src/data/data.module.js"></script>
+    <script src="src/menu/menuapp.module.js"></script>
 
     <!-- Routes -->
     <script src="src/routes.js"></script>
 
-    <!-- 'ShoppingList' module artifacts -->
-    <script src="src/shoppinglist/shoppinglist.component.js"></script>
-    <script src="src/shoppinglist/main-shoppinglist.controller.js"></script>
-    <script src="src/shoppinglist/shoppinglist.service.js"></script>
-    <script src="src/shoppinglist/item-detail.controller.js"></script>
+    <!-- 'Data' module artifacts -->
+    <script src="src/data/data.constants.js"></script>
+    <script src="src/data/menudata.service.js"></script>
 
-    <!-- 'Spinner' module artifacts -->
-    <script src="src/spinner/loadingspinner.component.js"></script>
+    <!-- 'Menu' module artifacts -->
+    <script src="src/menu/categories.component.js"></script>
+    <script src="src/menu/categories.controller.js"></script>
+    <script src="src/menu/items.component.js"></script>
+    <script src="src/menu/items.controller.js"></script>
 
   </body>
 </html>
