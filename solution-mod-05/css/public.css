@@ -113,6 +113,18 @@ h3.menu-item-title {
 }
 /* END SINGLE CATEGORY PAGE */
 
+/* SIGNUP PAGE */
+
+@-moz-document url-prefix() {
+  /* Firefox has some awkward fieldset styling involving width that
+   * interferes with the responsive table. This cannot be overridden
+   * without a Firefox-specific hack that we don't provide in Bootstrap: */
+  fieldset { display: table-cell; }
+}
+
+/* END SIGNUP PAGE */
+
+
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
